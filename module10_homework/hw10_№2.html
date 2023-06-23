@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     .btn {
+      padding: 0;
+      background-color: blue;
+      border: none;
+      outline: none;
+     
+      box-shadow: none;
+      cursor: pointer;
+      display: flex;
+      margin: 5px 10px;
+      padding: 10px 15px;
+      border-radius: 1px;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: white;
+      background: blue;
+      transition: 0.3s;
+    }
+     
+    .btn:hover {
+      box-shadow: 0px 2px 8px 2px rgba(141, 150, 178, .3);
+      transform: scale(1.05);
+    }
+    
+    .btn_text {
+      margin-right: 15px;
+    }
+    
+    .btn_icon1 {
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      color : black
+    }
+    
+    .btn--magic .btn_icon1 {
+      animation-name: magic1;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+    </style>
+</head>
+<body>
+<h1> кнопка </h1>
+  <button class="btn js_test">
+    <div class="btn_text">click me please</div>
+    </div>
+  </button>
+  <script>
+    const btn = document.querySelector('.js_test');
+
+btn.addEventListener('click', () => {
+    let scrollHeight = Math.max(
+  document.body.scrollHeight, document.documentElement.scrollHeight,
+  document.body.offsetHeight, document.documentElement.offsetHeight,
+  document.body.clientHeight, document.documentElement.clientHeight
+);
+  alert( window.innerWidth );
+  alert( scrollHeight)
+});
+  </script>
+</body>
+</html>
